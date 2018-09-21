@@ -1,145 +1,191 @@
-/* #4 #sweat #external css file */
-
-/* GLOBAL */
-
-/* #4 #global styles*/
-
-* {
-    /* #4 use #roboto #font */
-    font-family: 'Roboto', 'Arial', sans-serif;
-
-     /* #4 #sweat take care of #spacing between various elements */
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #F5F5F5;
-}
-
-/* #4 # sweat #uppercase buttons and w3w locations */
-button, strong {
-    text-transform: uppercase;
-}
+/*######################## Global  ###############################################################################################*/
+    *{
+        background-color: lightgray;
+        font-family: Arial, sans-serif;
+        margin: 0px;
+        padding: 0px;
+    }
 
 
 
-/* APP BAR */
+    button, .w3w-location-channel, .w3w-location-chat {
+        text-transform: uppercase;
+    }
 
-/* #4 #sweat address both #app-bar s */
-h1 {
-    background-color: #3F51B5;
-    color: white;
-}
+    .bar {
+        background-color: #1a237e;
+        color: white;
+        height: 56px;
+        font-size: 20px;
+        font-family: Roboto, Arial, sans-serif;
+        line-height: 56px;
+    }
 
-
-/* CHANNELS LIST */
-
-/* #4 #sweat #channels */
-ul {
-    /* #3 #channels #list modifies h2 to ul */
-    background-color: white;
-    /* #3 #channels #bullets removed */
-    list-style-type: none;
-}
-
-li {
-    /* #4 #channel #tile geometry */
-    box-sizing: border-box;
-    height: 48px;
-    padding: 16px;
-    font-size: 16px;
-    /* #4 #channel tiles are separated by #lines */
-    border-bottom: 1px solid #F5F5F5;
-}
-
-/* #4 active #channel is #highlighted */
-li.selected {
-    color: #3F51B5;
-    border-left: 4px solid #3F51B5;
-}
-
-li img {
-    /* #4 #middle vertical alignment of icons in the #channels list */
-    vertical-align: middle;
-}
-
-/* TAB BAR */
-
-/* #4 #sweat #tab-bar */
-#tab-bar {
-    /* #3 #tab-bar #container should be white */
-    background-color: white;
-    /* #3 #tab-bar #container has all buttons centered */
-    text-align: center;
-}
-
-/* #4 add styles to #tab-bar #buttons */
-#tab-bar button {
-    background-color: white;
-    border: none;
-    font-size: 13px;
-
-    /* #4 #tab-bar buttons have a width of #one-third of the available space */
-    width: 33%;
-    height: 72px;
-    padding: 16px;
-}
-
-/* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
-#tab-bar button img {
-    display: block;
-    margin: 0 auto 4px auto;
-}
-
-/* #4 the selected #tab-bar #button is #highlighted */
-#tab-bar button.selected {
-    color: #3F51B5;
-    border-bottom: 4px solid #3F51B5;
-}
+/*######################## App bar  ##############################################################################################*/
+    #cahnnel-list-area {
+        position: absolute;
+        width: 40%;
+        height: 100%;  
+    }
 
 
-/* MESSAGES */
-/* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
-.message {
-    /* #3 #chat #width*/
-    width: 80%;
 
-    /* #4 align all #messages using #margins */
-    margin-left: 2.5%;
+    #app-logo-headline {
+        background-color: inherit;
+        height: 56px;
+        position: absolute;
+        left: 16px;
 
-    /* #4 #message distance to next message container*/
-    margin-bottom: 8px;
-}
+    }
+    #app-headline {
+        background-color: inherit;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 104px;
+    }
+
+    /*app bar channel*/
+    #channel-location, .w3w-location-channel{
+        background-color: inherit;
+    }
 
 
-.message h3 {
-    font-size: medium;
-}
 
-.message h3 em {
-    font-size: larger;
-    font-style: normal;
-}
 
-.message h3 a {
-    /* #3 #chat #link color is primary text */
-    color: black;
-}
+/*######################## Channels list  ########################################################################################*/
+    #chat-area {
+        position: absolute;
+        width: 60%;
+        right: 0px;
+        height: 100%;
 
-.message p {
-    background-color: white;
-    padding: 16px;
-}
+    
+    }
 
-.message button {
-    background-color: #CDDC39;
-    color: black;
-    text-transform: uppercase;
-}
 
-/* #4 left align own #messages using #margins */
-.message.own {
-    margin-left: 17.5%;
-}
+    .channel-list {
+        list-style-type: none;
+        background-color: white;
+        overflow: hidden;
+        overflow-y: auto;
+        
+    }
+
+    .channel-list-element{
+        background-color: white;
+        height: 32.2px;
+        padding: 16px;
+        font-size: 16px;
+        border: 0.1px solid lightgray;
+    }
+
+        /*pictur favorit*/
+    .favorite-channel-symbol{
+        background-color: inherit;
+    }
+
+
+    .selected-channel {
+        border-left: 5px solid #1a237e;
+
+    }
+
+
+
+/*######################## Tab bar  ##############################################################################################*/
+    .button-symbol-channel {
+        background-color: inherit;
+        /*force new line*/
+        display: block;
+        /*center immage*/
+        margin-left: auto;
+        margin-right: auto;
+        height: inherit;  
+    }
+
+    #button-channel{
+        background-color: white;
+        color: white;      
+    }
+
+    .button-text-channel{
+        background-color: inherit;
+    }
+
+    #button-new, #button-trending, #button-favorites {
+        background-color: white;
+        color: black;
+        font-size: 13px;
+        text-align: center;
+        
+        margin: none;
+        border: none;
+        width: 33%;
+        padding-bottom: 4px;
+    }
+
+
+    #button-new:focus,#button-trending:focus, #button-favorites:focus {
+        border-bottom: 3px solid #1a237e;
+    }
+
+    #button-channel button.selected {
+        color: #3F51B5;
+        border-bottom: 4px solid #3F51B5;
+    }
+
+
+
+/*######################## Messages  #############################################################################################*/
+    .chat-message{
+        width: 80%;
+        margin-bottom: 8px;
+    }
+
+    /*cahnnel messages */
+
+    .message-metadata {
+        font-size: medium;
+    }
+    .w3w-location-chat {
+        color: black;
+    }
+    .message-text{
+        background-color: white;
+        padding: 16px;
+    }
+
+    .buton-message{
+        background-color: #CDDC39;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .info-em-message {
+        font-size: larger;
+        font-style: normal;  
+    }
+
+    .own-chat-message {
+        margin-left: 17.5%;
+    }
+    .other-chat-message{
+        margin-left: 2.5%;
+    }
+
+/*######################## Info color palet  #############################################################################################*/
+    /*                 
+        Function            Color name/number   comment
+                
+        Background          lightgray             
+        Primary text        black
+        Primary color       #1a237e             "indigo"
+        Primary color text  white
+        Accent color        #76ff03             "green"
+        Accent color text   black            
+    */
+
+
+
 
